@@ -8,10 +8,23 @@ Overview
 
 wireless-camera-control is a Moteino based standalone wireless controller for multiple pan/tilt heads based on the popular Bescor MP-101, along with provisions for controlling up to three geared motors for the implementation of zoom, follow focus and iris.
 
+Requirements
+------------
+
+1. Moteino [USB preferred, but either would do] + RFM69 receiver ```http://www.lowpowerlab.com/```.
+2. Bescor MP-101 pan/tilt head ```http://www.bescor.com/MP101.htm```.
+
+Acknowledgements
+----------------
+
+1. Felix at LowPowerLab, for a great development platform.
+2. B. Stott at the LowPowerLab forums, for the inspiration and the streamlined code examples.
+3. Protechy, for the initial breakdown of the Bescor head, pinout diagrams and initial directions on PWM.
+
 Future
 ------
 
-Make it work. :)
+Move beyond proof of concept for switch joystick. Next on line is a usage case for a potentiometer joystick in order to allow for speed control.
 
 Licence
 -------
