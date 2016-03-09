@@ -24,7 +24,7 @@ Acknowledgements
 Future
 ------
 
-Move beyond proof of concept for switch joystick. Next on line is a usage case for a potentiometer joystick in order to allow for speed control.
+Move beyond proof of concept for switch and potentiometer joystick for direction control. Next on line is implementation of speed control with potentiometer joystick.
 
 Licence
 -------
