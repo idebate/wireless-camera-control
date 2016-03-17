@@ -92,9 +92,6 @@ void loop()
       analogWrite(ACT_DOWN, 255);
       break;
   }
-  if (button_combo != 0) {
-      Serial.println();
-  }
   delay(DELAY);
 }
 
