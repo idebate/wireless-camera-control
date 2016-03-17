@@ -1,3 +1,18 @@
+/*
+
+    Project:      wireless-camera-control
+    Section:      wired control via switch based joystick
+    Description:  Controls a standard Bescor MP-101 pan/tilt head, using a Moteino. Direction control using switch joystick.
+
+    Referenced and using example code, logic and format from:
+
+    https://lowpowerlab.com/forum/index.php/topic,84.0.html
+
+    http://protechy.com/bescor-mp-101-hack/
+
+    The code is licensed under GPL.
+
+*/
 
 #include "Wire.h"
 
@@ -39,55 +54,42 @@ void loop()
 {
   int button_combo = handle_button();
   if (button_combo == 0) { digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_UP, LOW); digitalWrite(ACT_DOWN, LOW); }
-  if (button_combo != 0) { Serial.print(button_combo); }
   switch (button_combo) {
     case 1:
       digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_UP, LOW); digitalWrite(ACT_DOWN, LOW);
       analogWrite(ACT_LEFT, 255);
-      Serial.print('L');
       break;
     case 2:
       digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_UP, LOW); digitalWrite(ACT_DOWN, LOW);
       analogWrite(ACT_RIGHT, 255);
-      Serial.print('R');
       break;
     case 4:
       digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_DOWN, LOW);
       analogWrite(ACT_UP, 255);
-      Serial.print('U');
       break;
     case 8:
       digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_UP, LOW);
       analogWrite(ACT_DOWN, 255);
-      Serial.print('D');
       break;
     case 5:
       digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_DOWN, LOW);
       analogWrite(ACT_LEFT, 255);
       analogWrite(ACT_UP, 255);
-      Serial.print('L');
-      Serial.print('U');
       break;
     case 6:
       digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_DOWN, LOW);
       analogWrite(ACT_RIGHT, 255);
       analogWrite(ACT_UP, 255);
-      Serial.print('R');
-      Serial.print('U');
       break;
     case 9:
       digitalWrite(ACT_RIGHT, LOW); digitalWrite(ACT_UP, LOW);
       analogWrite(ACT_LEFT, 255);
       analogWrite(ACT_DOWN, 255);
-      Serial.print('L');
-      Serial.print('D');
       break;
     case 10:
       digitalWrite(ACT_LEFT, LOW); digitalWrite(ACT_UP, LOW);
       analogWrite(ACT_RIGHT, 255);
       analogWrite(ACT_DOWN, 255);
-      Serial.print('R');
-      Serial.print('D');
       break;
   }
   if (button_combo != 0) {
