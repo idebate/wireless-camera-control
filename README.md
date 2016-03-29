@@ -24,7 +24,7 @@ Acknowledgements
 Future
 ------
 
-Move beyond proof of concept for switch and potentiometer joystick for direction control. Next on line is implementation of speed control with potentiometer joystick.
+Now that speed control is working, next in line is proper motor control via external driver and implementation of steppers for zoom/focus/iris.
 
 Licence
 -------
